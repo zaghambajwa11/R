@@ -15,3 +15,11 @@ print(opop)
  library(Tmisc)
  data(quartet)
  View(quartet)
+
+pp <- quartet %>%
+  group_by(set) %>%
+  summarize(mean(x), sd(x), mean(y), sd(y), cor(x, y))
+install.packages("datasauRus")
+library(datasauRus)
+
+plot = ggplot(datasaurus_dozen,aes(x=x,y=y,colour=dataset))+geom_point()+theme_void()+theme(legend.position = "none")+facet_wrap(~dataset,ncol=3) # nolint
