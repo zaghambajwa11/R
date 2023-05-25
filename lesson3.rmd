@@ -43,7 +43,7 @@ You can also skip this step if you haven't closed your RStudio account since doi
 Run the code chunk below to install and load `ggplot2`. This may take a few minutes!
 
 ```{r loading and installing ggplot2, echo=FALSE, message=FALSE}
-install.packages('ggplot2')
+install.packages("ggplot2")
 library(ggplot2)
 ```
 
@@ -77,7 +77,7 @@ Try modifying the code below to answer the question about deposits by adding 'fi
 
 ```{r pressure, echo=FALSE}
 ggplot(data = hotel_bookings) +
-  geom_bar(mapping = aes(x = distribution_channel, ))
+  geom_bar(mapping = aes(x = distribution_channel, fill = deposit_type))
 ```
 This code chunk also creates a bar chart with 'distribution_channel' on the x-axis and 'count' on the y axis. But it also includes data from 'deposit_type' column as color-coded sections of each bar. There is a legend explaining what each color represents on the right side of the visualization. 
 
@@ -85,7 +85,7 @@ Now try adding 'fill=market_segment' to this code chunk instead of 'fill=deposit
 
 ```{r pressure, echo=FALSE}
 ggplot(data = hotel_bookings) +
-  geom_bar(mapping = aes(x = distribution_channel, ))
+  geom_bar(mapping = aes(x = distribution_channel, fill = market_segment))
 ```
 This bar chart is similar to the previous chart, except that 'market_segment' data is being recorded in the color-coded sections of each bar. 
 
@@ -99,7 +99,7 @@ Add 'deposit_type' after the '~' symbol in the code chunk below to create a diff
 ```{r creating a plot}
 ggplot(data = hotel_bookings) +
   geom_bar(mapping = aes(x = distribution_channel)) +
-  facet_wrap(~ )
+  facet_wrap(~deposit_type)
 ```
 
 This code chunk creates three bar charts for 'no_deposit', non_refund', and 'refundable' deposit types. You notice that it's hard to read the x-axis labels here, so you add one piece of code at the end that rotates the text to 45 degrees to make it easier to read. 
@@ -137,7 +137,7 @@ Run the code chunk below to find out; notice how the ~ character is being used b
 ```{r creating a plot}
 ggplot(data = hotel_bookings) +
   geom_bar(mapping = aes(x = distribution_channel)) +
-  facet_wrap(~deposit_type~market_segment) +
+  facet_wrap(~deposit_type ~ market_segment) +
   theme(axis.text.x = element_text(angle = 45))
 ```
 
@@ -145,3 +145,7 @@ These charts are probably overwhelming and too hard to read, but it can be usefu
 
 ## Activity Wrap Up
 The `ggplot2` package allows you to create a variety of visualizations in `R`, from simple scatter plots to complicated, multi-faceted bar charts. You can practice these skills by modifying the code chunks in the rmd file, or use this code as a starting point in your own project console. As you continue exploring aesthetic arguments in `ggplot2`, consider how you might use visualizations to gain insights and make observations about other kinds of data in the future. 
+
+## Quiz
+
+
