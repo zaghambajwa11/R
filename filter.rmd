@@ -78,7 +78,7 @@ You decide to use the facet_wrap() function to create a separate plot for each m
 ```{r faceting a plot}
 ggplot(data = hotel_bookings) +
   geom_bar(mapping = aes(x = hotel)) +
-  facet_wrap(~)
+  facet_wrap(~ market_segment)
 ```
 
 Now you have a separate bar chart for each market segment. Your stakeholder has a clearer idea of the size of each market segment, as well as the corresponding data for each hotel type.
@@ -104,8 +104,8 @@ For the first step, you can use the `filter()` function to create a data set tha
 
 ```{r filtering a dataset to just city hotels that are online TA}
 onlineta_city_hotels <- filter(hotel_bookings, 
-                           (hotel=="" & 
-                             hotel_bookings$market_segment==""))
+                           (hotel == "City Hotel" & 
+                             hotel_bookings$market_segment == "Online TA"))
 ```
 
 Note that you can use the '&' character to demonstrate that you want two different conditions to be true. Also, you can use the '$' character to specify which column in the data frame 'hotel_bookings' you are referencing (for example, 'market_segment'). 
@@ -122,8 +122,8 @@ You name this data frame `onlineta_city_hotels_v2`:
 
 ```{r filtering a dataset with the pipe}
 onlineta_city_hotels_v2 <- hotel_bookings %>%
-  filter(hotel=="City Hotel") %>%
-  filter(market_segment=="Online TA")
+  filter(hotel == "City Hotel") %>%
+  filter(market_segment == "Online TA")
 ```
 
 Notice how in the code chunk above, the %>% symbol is used to note the logical steps of this code. First, it starts with the name of the data frame, `onlineta_city_hotels_v2`, AND THEN it tells `R` to start with the original data frame `hotel_bookings`. Then it tells it to filter on the 'hotel' column; finally, it tells it to filter on the 'market_segment' column.
@@ -141,8 +141,9 @@ You can use either of the data frames you created above for your new plots becau
 Using the code for your previous scatterplot, replace `variable_name` in the code chunk below with either `onlineta_city_hotels` or `onlineta_city_hotels_v2` to plot the data your stakeholder requested:
 
 ```{r creating a plot part two}
-ggplot(data = variable_name) +
+ggplot(data = onlineta_city_hotels) +
   geom_point(mapping = aes(x = lead_time, y = children))
+  ggsave("scatterplot.png")
 ```
 
 Based on your previous filter, this scatterplot shows data for online bookings for city hotels. The plot reveals that bookings with children tend to have a shorter lead time, and bookings with 3 children have a significantly shorter lead time (<200 days). So, promotions targeting families can be made closer to the valid booking dates.  
