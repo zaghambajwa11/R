@@ -1,0 +1,34 @@
+```{r}
+ggplot(data = penguins) + geom_histogram(mapping = aes(x = flipper_length_mm))
+```
+```{r}
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+```
+ggplot is a function that takes in a data frame and then we add layers to it. The first layer is geom_histogram which is a histogram. The second layer is geom_point which is a scatterplot. The mapping argument is used to specify which variables are used for the x and y axis. The colour argument is used to specify which variable is used for the colour of the points. 
+
+create ggplot bar chart
+```{r}
+ggplot(data = penguins) + geom_bar(mapping = aes(x = species))
+```
+```{r}
+add color in ggplot bar chart # nolint
+ggplot(data = penguins) + geom_bar(mapping = aes(x = species, fill = species))
+```
+
+explian above code
+
+make letter z with ggplot
+
+```{r}
+ggplot(data = penguins) + geom_bar(mapping = aes(x = species, fill = species)) + 
+  labs(x = "Species", y = "Count", fill = "Species")
+```
+
+```{r} 
+ggplot(data = penguins) + geom_bar(mapping = aes(x = species, fill = species)) + 
+  labs(x = "Species", y = "Count", fill = "Species")
+```
+
+
+
