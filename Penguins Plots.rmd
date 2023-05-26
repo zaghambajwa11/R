@@ -1,0 +1,18 @@
+---
+title: "R Notebook"
+output: html_notebook
+author: "Zagham Arshad"
+date: "26/05/2023"
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r import librariers} 
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+```

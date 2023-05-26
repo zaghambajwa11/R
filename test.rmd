@@ -1,0 +1,12 @@
+---
+title: 'Lesson 4: Annotating and Saving'
+output: html_document
+---
+
+## Introduction
+My name is zagham . I am testing knit funtions in rmd file 
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+```
