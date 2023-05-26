@@ -1,7 +1,11 @@
+knitr::opts_chunk$set(output = "html_document")
+
 ---
 title: 'Lesson 4: Annotating and Saving'
 output: html_document
 ---
+
+
 
 ## Background for this activity
 
@@ -156,7 +160,7 @@ The `ggsave()` function in the code chunk below will save the last plot that was
 Then run the following code chunk to save that plot as a .png file named `hotel_booking_chart`, which makes it clear to your stakeholders what the .png file contains. Now you should be able to find this file in your 'Files' tab in the bottom right of your screen. Check it out!
 
 ```{r save your plot}
-ggsave('hotel_booking_chart_4.png')
+ggsave('hotel_booking_chart9_4.png')
 ```
 
 ## Practice quiz
@@ -201,3 +205,5 @@ geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g, size = year))
 
 What function creates a scatterplot and then adds a small amount of random noise to each point in the plot to make the points easier to find?
 Ans : jitter()
+
+
