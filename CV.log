@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.26)  26 MAY 2023 19:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.26)  26 MAY 2023 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -319,9 +319,34 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (/Users/macbookpro/Library/TinyTeX/texmf-dist/tex/latex/marvosym/marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+) (/Users/macbookpro/Library/TinyTeX/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+(/Users/macbookpro/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(/Users/macbookpro/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/Users/macbookpro/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))) (/Users/macbookpro/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/Users/macbookpro/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
+\Gm@bindingoffset=\dimen256
+\Gm@wd@mp=\dimen257
+\Gm@odd@mp=\dimen258
+\Gm@even@mp=\dimen259
+\Gm@layoutwidth=\dimen260
+\Gm@layoutheight=\dimen261
+\Gm@layouthoffset=\dimen262
+\Gm@layoutvoffset=\dimen263
+\Gm@dimlist=\toks33
 )
 
-! LaTeX Error: File `parskip.sty' not found.
+! LaTeX Error: File `fancyhdr.sty' not found.
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: sty)
@@ -330,15 +355,15 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.26 \RequirePackage
-                    [left=7.6cm,top=0.1cm,right=1cm,bottom=0.1cm,nohead,nofo... 
+l.47 \pagestyle
+               {fancy}^^M 
 Here is how much of TeX's memory you used:
- 14484 strings out of 478057
- 289062 string characters out of 5839265
+ 15364 strings out of 478057
+ 304283 string characters out of 5839265
  1850851 words of memory out of 5000000
- 34392 multiletter control sequences out of 15000+600000
+ 35251 multiletter control sequences out of 15000+600000
  517769 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 117i,0n,118p,412b,125s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,0n,118p,580b,125s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 !  ==> Fatal error occurred, no output PDF file produced!
